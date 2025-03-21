@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Project</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <header class="section-block" id="header">
+      <h1 id="header-logo">MAI TRAN</h1>
+      <nav id="top_nav">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="#contact">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero-banner">
+        <div id="hero-overlay">
+          <div id="hero-banner-container">
+            <h1>Cats Forever</h1>
+            <p>
+              Cats Forever is an example page how you can easily take portfolio
+              project and turn it to your own page.
+            </p>
+
+            <button id="modalCloseBtn">Close</button>
+            <button id="display-modal">See more</button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-block section-content-block"
+        id="projects"
+      >
+        <h2>Projects</h2>
+        <div id="project-content-container">
+          <div class="project-block"><h3>Projects 1</h3></div>
+          <div class="project-block"><h3>Projects 2</h3></div>
+          <div class="project-block"><h3>Projects 3</h3></div>
+          <div class="project-block"><h3>Projects 4</h3></div>
+        </div>
+      </section>
+
+      <section class="section section-block section-content-block" id="about">
+        <h2>About</h2>
+        <div id="about-content-container">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+            quasi natus ad est quam numquam adipisci similique, nam, aliquid
+            dolores molestiae, sit perspiciatis cumque autem. Iure, magni. Eius
+            ut voluptas minima sapiente, nisi beatae nam ducimus expedita.
+            Molestias vitae odio, non praesentium omnis ab laudantium doloribus
+            aperiam perferendis necessitatibus eveniet.
+          </p>
+
+          <img id="about-image" src="/cat10.jpg" alt="cat image" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-block" id="footer">
+      <div id="contact-content-container">
+        <h2>Contact us</h2>
+        <form action="submit" id="contact-form">
+          <div>
+            <label for="name"> Your name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div>
+            <label for="email">Your email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div>
+            <label for="message">Message to me</label>
+            <input type="text" name="message" id="message" required />
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+
+      <button id="back-to-top">Back to top</button>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
+
+<!-- <div class="modal-overlay hidden">
+    <div class="modal-content-box">
+      <p>I am a modal</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum
+        aliquam eaque cumque sint velit perferendis, possimus autem labore
+        explicabo?
+      </p>
+    </div>
+
+    <button id="modalCloseBtn">Close</button>
+  </div>
+
+  <button id="display-modal">Display modal</button>
+
+  <button id="toggle-theme">Change theme</button> -->
