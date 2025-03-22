@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Project</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header class="section-block" id="header">
       <h1 id="header-logo">Cats Forever</h1>
-      <nav id="top_nav">
+      <nav id="top-nav">
         <ul>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="/gallery.html">Gallery</a></li>
           <li><a href="#contact">Contact me</a></li>
         </ul>
+        <button id="toggle-theme">Change theme</button>
       </nav>
     </header>
 
@@ -78,32 +85,34 @@
             laudantium doloribus aperiam perferendis necessitatibus eveniet.
             aperiam perferendis necessitatibus eveniet.
           </p>
-          <img id="about-image" src="/cat10.jpg" alt="cat-image" />
+          <img id="about-image" src="/about-img.jpg" alt="cat-image" />
         </div>
       </section>
     </main>
 
-    <footer class="section-block" id="footer">
+    <footer class="section-block section-content-block">
       <div id="contact-content-container">
         <h2>Contact us</h2>
         <form action="submit" id="contact-form">
-          <div>
+          <div class="form-ele-container">
             <label for="name"> Your name</label>
             <input type="text" name="name" id="name" required />
           </div>
 
-          <div>
+          <div class="form-ele-container">
             <label for="email">Your email</label>
             <input type="email" name="email" id="email" required />
           </div>
 
-          <div>
+          <div class="form-ele-container">
             <label for="message">Message to me</label>
             <input type="text" name="message" id="message" required />
           </div>
 
-          <button type="submit">Send message</button>
+          <button id="form-submit" type="submit">Send message</button>
         </form>
+
+        <p>Copyright © My Website 2015</p>
       </div>
 
       <button id="back-to-top">Back to top</button>

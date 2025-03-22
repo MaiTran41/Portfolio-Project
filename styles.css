@@ -7,24 +7,20 @@
 :root {
   --background-primary: #112a46;
   --background-secondary: #c3d5e9;
-  --background-card: white;
   --text-primary: #2b2b6e;
   --text-secondary: #eeeeee;
-  --text-card: #112a46;
   --btn-hover: #e05555;
   --link-bg-hover: #1f3a60;
-  --accent: #b93135;
+  --accent-color: #b93135;
 }
 
 .dark-theme {
   --background-nav: #222831;
   --background-secondary: #2a3552;
   --background-primary: #191f28;
-  --background-card: white;
   --text-primary: #eeeeee;
   --text-secondary: #2b2b6e;
-  --text-card: #2b2b6e;
-  --accent: #ff857f;
+  --accent-color: #ff857f;
 }
 
 html {
@@ -47,10 +43,9 @@ h2 {
   padding: 0 200px;
 }
 .section-content-block {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
 #header {
   display: flex;
   justify-content: space-between;
@@ -67,24 +62,33 @@ ul {
   display: flex;
   list-style-type: none;
 }
-#top_nav {
+#top-nav {
   padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
 }
 
-#top_nav li {
+#top-nav li {
   margin: 0 10px;
   padding: 16px;
 }
-#top_nav a {
+#top-nav a {
   text-decoration: none;
   float: inline-end;
   color: var(--text-secondary);
   font-size: 1.5rem;
 }
 
-#top_nav li:hover {
+#top-nav li:hover {
   background-color: var(--link-bg-hover);
   border-radius: 10px;
+}
+
+#toggle-theme {
+  /* position: relative;
+  bottom: 2rem;
+  right: 2rem; */
 }
 
 #hero-banner {
@@ -128,7 +132,7 @@ ul {
   height: 50px;
   padding: 5px 8px;
   transition: 0.3s ease-out;
-  background-color: var(--accent);
+  background-color: var(--accent-color);
 }
 
 #display-modal:hover {
@@ -139,10 +143,13 @@ button {
   border-radius: 10px;
   border: none;
   color: var(--text-secondary);
+  background-color: var(--accent-color);
+  font-family: "Raleway", sans-serif;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: var(--btn-hover);
 }
 
 #projects {
@@ -150,13 +157,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 #project-content-container {
   display: flex;
-
   padding: 0 8px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -169,7 +173,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #828080;
   gap: 0.75rem;
   padding: 20px;
@@ -186,11 +190,11 @@ button:hover {
 .project-block h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--text-card);
+  color: var(--text-primary);
 }
 
 .project-link {
-  color: var(--accent);
+  color: var(--accent-color);
   font-size: 1rem;
   align-self: flex-end;
   text-decoration: none;
@@ -200,25 +204,31 @@ button:hover {
   background-color: var(--background-secondary);
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 36px;
   line-height: 2;
 }
 
 #about-content-container {
   display: flex;
-  gap: 100px;
+  gap: 120px;
 }
+
 #about-image {
-  width: 50%;
-  aspect-ratio: 50/33;
+  width: 100%;
+  aspect-ratio: 16/9;
   max-width: 500px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 16px #0f0e0e;
 }
 
 footer {
   background-color: var(--background-primary);
   color: var(--text-secondary);
-  height: 60vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #contact-content-container {
@@ -226,20 +236,44 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 20px;
+  gap: 2.25rem;
+  /* padding: 20px; */
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+}
+#contact-form label {
+  font-family: "Raleway", sans-serif;
+}
+
+.form-ele-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.form-ele-container input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+.form-ele-container input#message {
+  height: 100px;
+}
+
+#form-submit {
+  padding: 10px 16px;
+  align-self: center;
 }
 
 #back-to-top {
-  background-color: var(--accent);
+  background-color: var(--accent-color);
   padding: 1rem 2rem;
-  font-family: inherit;
   font-style: normal;
   border-radius: 10px;
   border: none;
@@ -251,6 +285,7 @@ footer {
 #back-to-top:hover {
   background-color: var(--btn-hover);
 }
+
 /* Add @media to make it responsive */
 
 /* #back-to-top {
