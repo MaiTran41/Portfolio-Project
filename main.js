@@ -1,8 +1,8 @@
 const backToTopBtn = document.getElementById("back-to-top");
-const modalCloseBtn = document.getElementById("modalCloseBtn");
-const modal = document.querySelector(".modal-overlay");
-const displayModalBtn = document.getElementById("display-modal");
-const toggleThemeBtn = document.getElementById("toggle-theme");
+const modalCloseBtn = document.getElementById("close-modal-btn");
+const modal = document.getElementById("modal-overlay");
+const displayModalBtn = document.getElementById("display-modal-btn");
+const toggleThemeBtn = document.getElementById("toggle-theme-btn");
 
 window.onscroll = () => {
   scrollFnc();
@@ -25,6 +25,8 @@ const backToTop = () => {
 
 const closeModal = () => {
   modal.classList.toggle("hidden");
+  console.log("btn clicked");
+  console.log(modal);
 };
 
 const displayModal = () => {
@@ -42,11 +44,44 @@ const toggleTheme = () => {
 backToTopBtn.addEventListener("click", backToTop);
 modalCloseBtn.addEventListener("click", closeModal);
 displayModalBtn.addEventListener("click", displayModal);
-toggleThemeBtn.addEventListener("click", toggleTheme);
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
+  }
+});
+
+//Hamburger
+document.addEventListener("DOMContentLoaded", function () {
+  // Hamburger menu functionality
+  const hamburger = document.querySelector(".hamburger");
+  const topNav = document.getElementById("top-nav");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      topNav.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll("#top-nav a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        topNav.classList.remove("active");
+      });
+    });
+
+    // Also close when clicking the theme toggle
+    const themeToggle = document.getElementById("toggle-theme-btn");
+    themeToggle.addEventListener("click", function () {
+      // Keep the existing theme toggle functionality
+      toggleTheme();
+
+      // Close the menu
+      hamburger.classList.remove("active");
+      topNav.classList.remove("active");
+    });
   }
 });

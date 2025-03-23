@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #c3d5e9;
+  background-color: #191f28;
 }
 
 #image-container {
@@ -20,7 +20,7 @@ body {
     "h g g"
     "i i j"
     "text text text";
-  padding: 50px;
+  padding: 80px 120px;
   gap: 0.5rem 0;
 }
 
@@ -78,4 +78,27 @@ body {
   margin: 0.5rem 0;
   font-size: 1rem;
   color: #eeeeee;
+}
+#top-nav {
+  padding: 40px 120px;
+}
+
+#back-home-link {
+  /* padding: 8px 16px; */
+  border-radius: 10px;
+  transition: ease-out;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+}
+
+#back-home-link:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #image-container {
+    padding: 40px 60px;
+  }
 }
