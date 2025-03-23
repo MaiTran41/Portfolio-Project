@@ -12,7 +12,7 @@
   --text-primary: #112a46;
   --text-secondary: #eeeeee;
   --btn-hover: #e05555;
-  --close-modal-btn-text-color: #112a46;
+  --close-modal-btn-text-color: #1f3a60;
   --link-bg-hover: #1f3a60;
   --accent-color: #b93135;
 }
@@ -128,7 +128,6 @@ ul {
   font-size: 3.5rem;
   color: var(--text-secondary);
 }
-
 #hero-banner-container p {
   text-align: center;
   color: var(--text-secondary);
@@ -143,6 +142,15 @@ ul {
 
 #display-modal-btn:hover {
   background-color: var(--btn-hover);
+}
+
+.modal-content-box h1 {
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+.modal-content-box p {
+  color: var(--text-primary);
+  font-size: 1rem;
 }
 
 #modal-btn-container {
