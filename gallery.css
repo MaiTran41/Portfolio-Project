@@ -4,14 +4,27 @@
   margin: 0;
 }
 
+:root {
+  --background-color: #112a46;
+  --text-color: white;
+  --accent-color: #b93135;
+  --link-bg-hover: #2a3552;
+  --btn-hover: #e05555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #191f28;
+  background-color: var(--background-color);
+  font-family: "Raleway", sans-serif;
+  color: var(--text-color);
 }
 
 #image-container {
   display: grid;
   grid-template-columns: 35% 30% 35%;
-  grid-template-rows: auto;
   grid-template-areas:
     "a b c"
     "d b f"
@@ -20,8 +33,8 @@ body {
     "h g g"
     "i i j"
     "text text text";
-  padding: 80px 120px;
-  gap: 0.5rem 0;
+  padding: 36px 120px;
+  gap: 1rem;
 }
 
 #image-container img {
@@ -72,33 +85,89 @@ body {
   grid-area: i;
 }
 
-#originText {
-  grid-area: text;
-  font-family: "Raleway", sans-serif;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #eeeeee;
-}
 #top-nav {
   padding: 40px 120px;
 }
 
 #back-home-link {
-  /* padding: 8px 16px; */
   border-radius: 10px;
   transition: ease-out;
   background-color: transparent;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease-out;
 }
 
 #back-home-link:hover {
   cursor: pointer;
+  background-color: var(--link-bg-hover);
+}
+
+#back-to-top-btn {
+  background-color: var(--accent-color);
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  color: var(--text-color);
+  transition: 0.4s ease-out;
+}
+
+#back-to-top-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+#origin-text {
+  grid-area: text;
+  font-family: "Raleway", sans-serif;
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 768px) {
   #image-container {
-    padding: 40px 60px;
+    padding: 36px 60px;
+  }
+
+  #top-nav {
+    padding: 24px;
+  }
+
+  #back-home-link {
+    font-size: 1rem;
+  }
+  #image-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "i"
+      "j"
+      "text";
+    padding: 36px;
+    gap: 16px;
+  }
+
+  #origin-text {
+    font-size: 0.75rem;
+  }
+
+  #back-to-top-btn {
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease-out;
+  }
+  #back-to-top-btn:hover {
+    background-color: var(--btn-hover);
   }
 }

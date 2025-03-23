@@ -1,4 +1,4 @@
-const backToTopBtn = document.getElementById("back-to-top");
+const backToTopBtn = document.getElementById("back-to-top-btn");
 const modalCloseBtn = document.getElementById("close-modal-btn");
 const modal = document.getElementById("modal-overlay");
 const displayModalBtn = document.getElementById("display-modal-btn");
@@ -52,9 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//Hamburger
 document.addEventListener("DOMContentLoaded", function () {
-  // Hamburger menu functionality
   const hamburger = document.querySelector(".hamburger");
   const topNav = document.getElementById("top-nav");
 
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
       topNav.classList.toggle("active");
     });
 
-    // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll("#top-nav a");
     navLinks.forEach((link) => {
       link.addEventListener("click", function () {
@@ -73,13 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Also close when clicking the theme toggle
     const themeToggle = document.getElementById("toggle-theme-btn");
     themeToggle.addEventListener("click", function () {
-      // Keep the existing theme toggle functionality
       toggleTheme();
 
-      // Close the menu
       hamburger.classList.remove("active");
       topNav.classList.remove("active");
     });

@@ -74,6 +74,7 @@ ul {
 #top-nav li {
   margin: 0 10px;
   padding: 16px;
+  transition: 0.3s ease-out;
 }
 #top-nav a {
   text-decoration: none;
@@ -166,6 +167,7 @@ button {
   border: none;
   color: var(--text-secondary);
   font-family: "Raleway", sans-serif;
+  transition: 0.3s ease-out;
 }
 
 button:hover {
@@ -201,7 +203,7 @@ button.btn-primary:hover {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0 0 10px #828080;
+  box-shadow: 0 0 8px #7d7878;
   gap: 0.75rem;
   padding: 20px;
 }
@@ -225,6 +227,9 @@ button.btn-primary:hover {
   font-size: 1rem;
   align-self: flex-end;
   text-decoration: none;
+}
+.project-link:hover {
+  font-weight: 600;
 }
 
 #about {
@@ -279,7 +284,6 @@ footer {
 
 .form-ele-container {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   gap: 4rem;
 }
@@ -299,10 +303,9 @@ footer {
   align-self: center;
 }
 
-#back-to-top {
+#back-to-top-btn {
   background-color: var(--accent-color);
   padding: 1rem 2rem;
-  font-style: normal;
   border-radius: 10px;
   border: none;
   position: fixed;
@@ -310,7 +313,7 @@ footer {
   right: 2rem;
 }
 
-#back-to-top:hover {
+#back-to-top-btn:hover {
   background-color: var(--btn-hover);
 }
 
@@ -475,7 +478,7 @@ footer {
     font-size: 0.75rem;
   }
 
-  #back-to-top {
+  #back-to-top-btn {
     padding: 0.5rem 1rem;
   }
 
