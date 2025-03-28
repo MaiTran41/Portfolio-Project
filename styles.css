@@ -102,7 +102,7 @@ ul {
 #hero-banner {
   height: 100vh;
   background-size: cover;
-  background-image: url(/background-banner.jpg);
+  background-image: url(/images/background-banner.jpg);
 }
 
 #hero-overlay {
